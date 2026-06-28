@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy ASP.Net Core app to Azure Web App - asp-mvc-app
+name: Build and deploy ASP.Net Core app to Azure Web App - contoso-app
 
 on:
   push:
@@ -51,15 +51,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_5421E7287C6240B496DFA949305C1A9F }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_8B12B34DF20646E080EB1C44D3168644 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_C0B236321A494F4981995314F6DBF1D8 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_26B4BDCB2CA5430FABCD00585311EF90 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_40C668F876194DE4A0710E4750BC2E25 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_6430352F7FA442478AB372A0060821BD }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'asp-mvc-app'
+          app-name: 'contoso-app'
           slot-name: 'Production'
           package: .
           
